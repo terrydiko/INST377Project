@@ -13,5 +13,5 @@ createButton2.className = 'button2';
 createButton2.textContent = "Newly Reported Crimes";
 getButton1.appendChild(createButton2);
 
-const getCrime= document.getElementById('#crime')
+
 

@@ -4,6 +4,7 @@ const urlByCategory =
 
 let crimeSet = new Set();
 let setArray = [];
+let data = undefined;
 
 var crimes = L.layerGroup();
 let all = L.layerGroup();
@@ -96,8 +97,10 @@ async function getData() {
     crimeSet.add(data[x].clearance_code_inc_type);
   }
 
+  //  moving all the crime types to an array
   setArray = Array.from(crimeSet);
 
+  
   setArray.forEach(async (e) => {
     let url1 = `https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?clearance_code_inc_type=${e
       .replaceAll(" ", "%20")
@@ -162,3 +165,4 @@ async function getData() {
 }
 
 getData();
+

@@ -1,29 +1,25 @@
 {
-  "name": "inst377project",
+  "name": "assignment_2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Assignment 2, task list with due dates and search capability",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/server.js",
+    "start-watch": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gabrielifeliz/INST377Project.git"
-  },
   "keywords": [],
-  "author": "",
+  "author": "Bill Farmer",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gabrielifeliz/INST377Project/issues"
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   },
-  "homepage": "https://github.com/gabrielifeliz/INST377Project#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "nodemod": "^2.6.1",
     "sqlite3": "^5.0.0"
-  },
-  "devDependencies": {
-    "nodemod": "^2.6.1"
   }
 }
+ 

@@ -22,7 +22,7 @@
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""
     ></script>
-    <script defer src="js/database.js"></script>
+    
 
     <title>Document</title>
   </head>
@@ -32,10 +32,11 @@
         <h1 style="text-align: center">WHIZZPER</h1>
         <!-- <img src="./images/dog.png" alt="a simple dog logo" /> -->
 
+        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
           <div class="container">
-            <a class="navbar-brand" href="#">
-                  <img src="w.png" alt="Logo" style="width: 100px; height: 90px;" >
+            <a class="navbar-brand" href="./index.html">
+                  <img src="./Icons/w.png" alt="Logo" style="width: 100px; height: 90px;" >
                 </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -43,37 +44,48 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home
+                  <a class="nav-link" href="./index.html">Home
                         <span class="sr-only">(current)</span>
                       </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="./aboutus.html">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Help</a>
+                  <a class="nav-link" href="./help.html">Help</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Report</a>
+                  <a class="nav-link" href="./Report.html">Report</a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-        </nav>
       </header>
 
-      <div id="mapid"></div>
 
-      <div class="crime1"></div>
 
-      <div id="clearance"></div>
-      
-      
-      <!-- <div class="group 1">
-      <button>report</button>
-      <button>Newly</button>
-    </div> -->
+      <center><h1 id="about">About Us</h1></center>
+   
+      <p>
+        Our website is about solving the areas within PG county that have
+            experiecned various forms of crime since 2017. We know that most of these crimes are 
+          reporrted to authorites, while many others aren't. Our misson is to create a website that lets citizens have access
+            to resources that show on and updated map and also show many other crime activites, along with the ability to report crimes in certian areas. 
+        <br>
+        <br>
+          Our website is for people that have crime in the area. 
+          This problem can also affect potential residents’ interest in moving with the country, researching how certain safe regions are within the various neighborhoods. 
+          This will give people the ability to be more knowledgeable and up to date about crimes within their community.  
+          The system that we have created will let users view a country map, showing any activities of crime. 
+          The users also have the ability to report a crime and upload details like date, time of the crime, location, and pictures.
+        <br>
+        <br>
+          We chose to use the Prince George’s County open data API. This call this dataset “Crime Incidents February 2017 to Present”. 
+          We selected this dataset because it allows us to understand the crime occurrences across the county. 
+          It helps us create our main proposal, creating a map instance of crime.  
+        </p> 
+             
 
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -87,7 +99,7 @@
         crossorigin="anonymous"
       ></script>
 
-      <script defer src="js/js.js"></script>
+      
     </main>
   </body>
 </html>

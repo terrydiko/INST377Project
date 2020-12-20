@@ -13,7 +13,7 @@ We found it imparative to ensure that our application was versatils enough to be
   * Microsoft Edge
 
 ## Manuals
-* [User Manual](user.md)
+* [User Manual](docs/user.md)
 * [Developer Manual](developer.md)
 
 # Whizzper Developer Manual

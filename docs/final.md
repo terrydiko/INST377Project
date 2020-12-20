@@ -28,13 +28,14 @@ In order to solver the probelm, we wanted to implement an interactive map that a
   * Used to pipoint the location of crimes pulled from API
   * Interactive map that allows the user to zoom in and out showing street details
 * MongoDB
-  * 
-  * 
+  * Used as database that holds the records of crimes reported by users
 
 ## Evaluation
 As a team, we felt as though our implementations met our goal to solve the information problem. With more time, there are a number of features we can add to improve user experience and website functionality. Nonethless, our collaborative efforts created an application that we are pleased to present. 
+
 ## Challenges
-In the beginning of our projects, we found ourselves lost on where to start. We initially implemented the Tableau API but later relalized that we not sufficent as wwe were pulling data from a file rather than an API. This prompted us to implement Leaflet into our application, which took a good amount of time as it was a tool we were not familiar with. Once we implemented the javascript, we needed to make sure we could pull every crime object, plot it on the map based on the longitude and laitude, then implement a filter the user could manipulate to see the data. A few late night sessions occurred to make sure filtering and data gathiering worked properly. 
+In the beginning of our projects, we found ourselves lost on where to start. We initially implemented the Tableau API but later relalized that we not sufficent as wwe were pulling data from a file rather than an API. This prompted us to implement Leaflet into our application, which took a good amount of time as it was a tool we were not familiar with. Once we implemented the javascript, we needed to make sure we could pull every crime object, plot it on the map based on the longitude and laitude, then implement a filter the user could manipulate to see the data. A few late night sessions occurred to make sure filtering and data gathiering worked properly.
+
 ## Future Developments
  * Implement a search feature that returns details on crimes in a table format
  * Require some form of user credentials be used to ensure the site has some form of security

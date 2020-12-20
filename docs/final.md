@@ -22,7 +22,14 @@ The data used to create this application is labled as [Crime Incidents February 
 
 ## Strategies and Solutions
 In order to solver the probelm, we wanted to implement an interactive map that allowed users to view the locations of crimes. This tool allows the user to view the map in grayscale or street form, for accessbility purposes. Then, they can filter which crimes they want to see and which they want to hide. The user will also be able to report crimes anonymously through a form page. With these tools, users can sort through data using their preference. 
-## Technical Decisions
+
+## Technical System Rationale
+* Leaflet Js
+  * Used to pipoint the location of crimes pulled from API
+  * Interactive map that allows the user to zoom in and out showing street details
+* MongoDB
+  * 
+  * 
 
 ## Evaluation
 As a team, we felt as though our implementations met our goal to solve the information problem. With more time, there are a number of features we can add to improve user experience and website functionality. Nonethless, our collaborative efforts created an application that we are pleased to present. 

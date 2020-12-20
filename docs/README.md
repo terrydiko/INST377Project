@@ -73,4 +73,4 @@ localhost:5000
 ## Future Development
  * Include more filtering options on the main page to give the user more control over viewing data
  * Expand the website idea to other counties within Maryland such as Montgomery, Calverton, Anne Arundel
- * Allow user to input a date or another piece of information to get specific information from crimes mathcing      the input
+ * Allow user to input a date or another piece of information to get specific information from crimes mathcing the input

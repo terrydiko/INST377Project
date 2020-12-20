@@ -45,7 +45,7 @@ npm run start-watch
 ```
 Open your preferred internet browser and type in:
 ```github
-localhost:5000
+localhost:4000
 ```
 
 ## Server API

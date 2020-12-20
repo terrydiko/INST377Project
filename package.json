@@ -1,7 +1,7 @@
 {
-  "name": "assignment_2",
+  "name": "inst377project",
   "version": "1.0.0",
-  "description": "Assignment 2, task list with due dates and search capability",
+  "description": "whizzper, a crime information and reporting app inst377 group project",
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Bill Farmer",
+  "author": "Terrence Diko",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.6"

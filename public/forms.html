@@ -53,7 +53,7 @@
                   <a class="nav-link" href="./help.html">Help</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./Report.html">Report</a>
+                  <a class="nav-link" href="./Report.html">Documentation</a>
                 </li>
               </ul>
             </div>
@@ -61,68 +61,66 @@
         </nav>
       </header>
 
-      <form>
-        <div class="form-group">
-          <!-- State Button -->
-          <label for="crimeType" class="control-label">Crime Type</label>
-          <select class="form-control" id="crimeType">
-            
-            <option value="accident">Accident</option>
-            <option value="assault">Assault</option>
-            <option value="auto">Auto</option>
-            <option value="B & E">Breaking & Entering</option>
-            <option value="homicide">Homicide</option>
-            <option value="robbery">Robbery</option>
-            <option value="sex offense">Sex offense</option>
-            <option value="theft">Theft</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <!-- State Button -->
+        <label for="crimeType" class="control-label">Crime Type</label>
+        <select class="form-control" id="crimeType">
+          
+          <option value="accident">Accident</option>
+          <option value="assault">Assault</option>
+          <option value="auto">Auto</option>
+          <option value="B & E">Breaking & Entering</option>
+          <option value="homicide">Homicide</option>
+          <option value="robbery">Robbery</option>
+          <option value="sex offense">Sex offense</option>
+          <option value="theft">Theft</option>
+        </select>
+      </div>
 
-        <div class="form-group wrapper">
-          <!-- Street 1 -->
-          <label for="street1_id" class="needs-validation">Street Address </label>
-          <div class="search-input">
-              <input
-              type="text"
-              class="form-control"
-              id="street1_id"
-              name="street1"
-              placeholder="Street address"
-              autocomplete="off"
-              required
-            />
-            <div class="autocom-box">
-              <!-- here list are inserted from javascript -->
-            </div>
+      <div class="form-group wrapper">
+        <!-- Street 1 -->
+        <label for="street1_id" class="needs-validation">Street Address </label>
+        <div class="search-input">
+            <input
+            type="text"
+            class="form-control"
+            id="street1_id"
+            name="street1"
+            placeholder="Street address"
+            autocomplete="off"
+            required
+          />
+          <div class="autocom-box">
+            <!-- here list are inserted from javascript -->
           </div>
-          <div class="invalid-feedback">Please fill out this field.</div>
         </div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
 
-        <div class="form-group">
-          <!-- Latitude-->
-          <input
-            type="hidden"
-            class="form-control"
-            id="lat_id"
-            name="lat"
-          />
-        </div>
-        
-        <div class="form-group">
-          <!-- Longitude-->
-          <input
-            type="hidden"
-            class="form-control"
-            id="lon_id"
-            name="lon"
-          />
-        </div>
+      <div class="form-group">
+        <!-- Latitude-->
+        <input
+          type="hidden"
+          class="form-control"
+          id="lat_id"
+          name="lat"
+        />
+      </div>
+      
+      <div class="form-group">
+        <!-- Longitude-->
+        <input
+          type="hidden"
+          class="form-control"
+          id="lon_id"
+          name="lon"
+        />
+      </div>
 
-        <div class="form-group">
-          <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary" onclick=submitCrime()>Submit</button>
-        </div>
-      </form>
+      <div class="form-group">
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" onclick=submitCrime()>Submit</button>
+      </div>
 
       <script>
         // Disable form submissions if there are invalid fields

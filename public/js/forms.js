@@ -45,7 +45,13 @@ function submitCrime() {
     body: JSON.stringify(data),
   });
 
-  window.location = "../index.html";
+  fetchPromise
+  .then((response) => {
+    window.location = "../"
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 }
 

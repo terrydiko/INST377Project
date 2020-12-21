@@ -90,8 +90,8 @@ const outputHtml = matches => {
 function select(element){
     let selectData = element.textContent;
     search.value = selectData.split(" @ ")[0];
-    document.getElementById("lat_id").value = selectData.split(" @ ")[0].split(", ")[0];
-    document.getElementById("lon_id").value = selectData.split(" @ ")[0].split(", ")[1];
+    document.getElementById("lat_id").value = selectData.split(" @ ")[1].split(", ")[0];
+    document.getElementById("lon_id").value = selectData.split(" @ ")[1].split(", ")[1];
     document.querySelector('.search-input').classList.remove("active");
 }
 

@@ -123,6 +123,8 @@
             id="zip_id"
             name="zip"
             placeholder="#####"
+            pattern="[0-9]{5}"
+            maxlength="5"
             required
           />
           <div class="invalid-feedback">Please fill out this field.</div>
@@ -130,7 +132,7 @@
 
         <div class="form-group">
           <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" onclick=submitCrime()>Submit</button>
         </div>
       </form>
 

@@ -1,6 +1,6 @@
 let express = require('express')
 let router = express.Router()
-let db = require('../database');
+let db = require('../crimedb');
 
 // Create a new task
 // POST localhost:<port>/task

@@ -18,3 +18,34 @@
 //      console.log(getCrimeId)
 // }
 // getData()
+
+function submitCrime() {
+    
+    console.log("HERE submitCrime");
+
+    let crimeTypeItem = document.getElementById("crimeType");
+    let crimeType = crimeTypeItem.options[crimeTypeItem.selectedIndex].value;
+    let street1 = document.getElementById("street1_id").value;
+    let city = document.getElementById("city_id").value;
+    let stateItem = document.getElementById("state_id");
+    let state = stateItem.options[stateItem.selectedIndex].value;
+    let zip = document.getElementById("zip_id").value;
+
+    let data = {
+        'crimetype': crimeType,
+        'streetaddress': street1,
+        'city': city,
+        'state': state,
+        'zipcode': zip,
+    };
+
+    console.log(JSON.stringify(data))
+    let crimeURL = "http://localhost:4000/crime";
+    const fetchPromise = fetch(crimeURL, {
+      method: 'POST', headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      }, body: JSON.stringify(data)
+    });
+
+}

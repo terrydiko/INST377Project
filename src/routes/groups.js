@@ -1,6 +1,6 @@
 let express = require('express')
 let groupRouter = express.Router()
-let db = require('../database');
+let db = require('../crimedb');
 
 //GET all groups
 groupRouter.get('/allGroups', (req, res) => {

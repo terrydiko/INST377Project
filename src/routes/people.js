@@ -1,6 +1,6 @@
 let express = require('express')
 let peopleRouter = express.Router()
-let db = require('../database');
+let db = require('../crimedb');
 
 //GET all people
 peopleRouter.get('/allPeople', (req, res) => {

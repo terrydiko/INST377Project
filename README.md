@@ -52,10 +52,6 @@ localhost:4000
 
 ### Endpoints
 
-##### PUT:
-  * 
-  * 
-  * 
 ##### GET:
   * 
   * 

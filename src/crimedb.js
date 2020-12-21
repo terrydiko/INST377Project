@@ -10,19 +10,15 @@ const crimeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    streetaddress: {
+    location: {
         type: String,
         required: true
     },
-    city: {
+    lat: {
         type: String,
         required: true
     },
-    state: {
-        type: String,
-        required: true
-    },
-    zipcode: {
+    lon: {
         type: String,
         required: true
     }

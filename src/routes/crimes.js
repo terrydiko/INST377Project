@@ -17,10 +17,9 @@ crimeRouter.post("/crime", (req, res) => {
   Crime.findOne(
     {
       crimetype: req.body.crimetype,
-      streetaddress: req.body.streetaddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipcode: req.body.zipcode,
+      location: req.body.location,
+      lat: req.body.lat,
+      lon: req.body.lon
     },
     function (err, crime) {
       if (err) console.log(err);
@@ -65,10 +64,9 @@ crimeRouter.put("/crime", (req, res) => {
     },
     {
       crimetype: req.body.crimetype,
-      streetaddress: req.body.streetaddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipcode: req.body.zipcode,
+      location: req.body.location,
+      lat: req.body.lat,
+      lon: req.body.lon
     },
     function (err, numAffected) {
       if (err) console.log(err);
@@ -84,10 +82,9 @@ crimeRouter.delete("/crime", (req, res) => {
   Crime.deleteOne(
     {
       crimetype: req.body.crimetype,
-      streetaddress: req.body.streetaddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipcode: req.body.zipcode,
+      location: req.body.location,
+      lat: req.body.lat,
+      lon: req.body.lon
     },
     function (err, result) {
       if (err) return handleError(err);

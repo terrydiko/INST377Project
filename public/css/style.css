@@ -1,21 +1,19 @@
-.crime1{
+.crime1 {
   display: flex;
   justify-content: space-between;
-
 }
-body{
+body {
   margin: 10%;
 }
-#mapid{
+#mapid {
   margin-top: 2%;
   height: 900px;
 }
-main{
-  margin:10%;
+main {
+  margin: 10%;
   margin-top: 0%;
 }
 button {
- 
   background-color: #a52a2ade;
   border: none;
   color: white;
@@ -28,34 +26,96 @@ button {
   cursor: crosshair;
 }
 
-
-.button1, .button2{ 
+.button1,
+.button2 {
   margin-top: 1%;
   padding: 1% 2%;
-  background: rgb(6,14,131);
-  background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+  background: rgb(6, 14, 131);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 14, 131, 1) 0%,
+    rgba(12, 25, 180, 1) 100%
+  );
   border: none;
 }
-.button1:hover,.button2:hover {
-   background: rgb(0,3,255);
-background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+.button1:hover,
+.button2:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
 }
-
-
 
 p {
   line-height: 1.8;
   margin: 150px;
   text-indent: 70px;
- 
 }
 
-#about{
+#about {
   margin-top: 50px;
 }
 
-.arrow-right{
-  &:before{ @include body(50%,30%,50% - 30%/2,0); }
-  &:after { @include arrow($w/2,$h/2,0,50%,left); }
+.arrow-right {
+  &:before {
+    @include body(50%, 30%, 50% - 30%/2, 0);
+  }
+  &:after {
+    @include arrow($w/2, $h/2, 0, 50%, left);
+  }
 }
 
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}

@@ -34,8 +34,8 @@ function submitCrime() {
     lat: latitude,
     lon: longitude,
   };
-
-  let crimeURL = "http://localhost:4000/crime";
+  
+  let crimeURL = "https://whizzper.herokuapp.com/crime";
   const fetchPromise = fetch(crimeURL, {
     method: "POST",
     headers: {

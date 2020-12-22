@@ -40,4 +40,3 @@ In the beginning of our projects, we found ourselves lost on where to start. We 
  * Implement a search feature that returns details on crimes in a table format
  * Require some form of user credentials be used to ensure the site has some form of security
  * Provide mre filtering options to help users narrow down their search
- * Pinpoint user reported crimes on the map after they submit details through the forms page

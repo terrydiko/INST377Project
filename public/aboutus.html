@@ -11,18 +11,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
-    
+   
 
     <title>About Us</title>
   </head>
@@ -32,21 +21,33 @@
         <h1 style="text-align: center">WHIZZPER</h1>
         <!-- <img src="./images/dog.png" alt="a simple dog logo" /> -->
 
-        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
           <div class="container">
             <a class="navbar-brand" href="./index.html">
-                  <img src="./Icons/w.png" alt="Logo" style="width: 100px; height: 90px;" >
-                </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+              <img
+                src="./Icons/w.png"
+                alt="Logo"
+                style="width: 100px; height: 90px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="./index.html">Home
-                        <span class="sr-only">(current)</span>
-                      </a>
+                  <a class="nav-link" href="./index.html"
+                    >Home
+                    <span class="sr-only">(current)</span>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./aboutus.html">About</a>
@@ -63,29 +64,36 @@
         </nav>
       </header>
 
+      <div class="shadow-lg p-4 mb-4 bg-white" id="about">
+        <center><h1 id="about">About Us</h1></center>
 
-
-      <center><h1 id="about">About Us</h1></center>
-   
-      <p>
-        Our website is about solving the areas within PG county that have
-            experiecned various forms of crime since 2017. We know that most of these crimes are 
-          reporrted to authorites, while many others aren't. Our misson is to create a website that lets citizens have access
-            to resources that show on and updated map and also show many other crime activites, along with the ability to report crimes in certian areas. 
-        <br>
-        <br>
-          Our website is for people that have crime in the area. 
-          This problem can also affect potential residents’ interest in moving with the country, researching how certain safe regions are within the various neighborhoods. 
-          This will give people the ability to be more knowledgeable and up to date about crimes within their community.  
-          The system that we have created will let users view a country map, showing any activities of crime. 
-          The users also have the ability to report a crime and upload details like date, time of the crime, location, and pictures.
-        <br>
-        <br>
-          We chose to use the Prince George’s County open data API. This call this dataset “Crime Incidents February 2017 to Present”. 
-          We selected this dataset because it allows us to understand the crime occurrences across the county. 
-          It helps us create our main proposal, creating a map instance of crime.  
-        </p> 
-             
+        <p>
+          Our website is about solving the areas within PG county that have
+          experiecned various forms of crime since 2017. We know that most of
+          these crimes are reporrted to authorites, while many others aren't.
+          Our misson is to create a website that lets citizens have access to
+          resources that show on and updated map and also show many other crime
+          activites, along with the ability to report crimes in certian areas.
+          <br />
+          <br />
+          Our website is for people that have crime in the area. This problem
+          can also affect potential residents’ interest in moving with the
+          country, researching how certain safe regions are within the various
+          neighborhoods. This will give people the ability to be more
+          knowledgeable and up to date about crimes within their community. The
+          system that we have created will let users view a country map, showing
+          any activities of crime. The users also have the ability to report a
+          crime and upload details like date, time of the crime, location, and
+          pictures.
+          <br />
+          <br />
+          We chose to use the Prince George’s County open data API. This call
+          this dataset “Crime Incidents February 2017 to Present”. We selected
+          this dataset because it allows us to understand the crime occurrences
+          across the county. It helps us create our main proposal, creating a
+          map instance of crime.
+        </p>
+      </div>
 
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -93,13 +101,7 @@
         crossorigin="anonymous"
       ></script>
 
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"
-      ></script>
-
-      
+    
     </main>
   </body>
 </html>

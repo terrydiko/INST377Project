@@ -14,27 +14,11 @@ crimeRouter.post("/crime", (req, res) => {
   console.log('HERE IN crimeRouter POST')
   console.log(req.body)
 
-  Crime.findOne(
-    {
-      crimetype: req.body.crimetype,
-      location: req.body.location,
-      lat: req.body.lat,
-      lon: req.body.lon
-    },
-    function (err, crime) {
-      if (err) console.log(err);
-      if (crime) {
-        console.log("This has already been saved");
-      } else {
-        var crime = new Crime(req.body);
-        crime.save(function (err, crime) {
-          if (err) console.log(err);
-          console.log("New crime created");
-          res.redirect(`/`);
-        });
-      }
-    }
-  );
+  var crime = new Crime(req.body);
+  crime.save(function (err, crime) {
+    if (err) console.log(err);
+    console.log("New crime created");
+  });
 });
 
 /*

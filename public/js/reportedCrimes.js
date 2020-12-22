@@ -103,7 +103,7 @@ async function getData() {
     const latitude = data[i].lat;
     const crime = data[i].crimetype;
     const location = data[i].location
-    console.log(`Latitude: ${latitude} Longitude: ${longitude}`)
+    
 
     if (crime === "accident") {
       L.marker([longitude, latitude], { icon: accidentIcon }).addTo(accident);
@@ -145,3 +145,5 @@ async function getData() {
 }
 
 getData();
+
+document.getElementById('crimereportsuccess').style['display'] = sessionStorage.getItem("displaysuccess");

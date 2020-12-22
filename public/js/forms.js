@@ -48,12 +48,13 @@ function submitCrime() {
   });
 
   fetchPromise
-  
   .then((response) => {
-    alert('Crime was Submitted')
+    sessionStorage.setItem('displaysuccess', 'block');
     window.location = "../reportedCrimes.html"
   })
   .catch((err) => {
+    $('#crimeConfirmation').modal('hide')
+    $('#crimeError').modal('show')
     console.log(err);
   });
 
@@ -87,7 +88,7 @@ const outputHtml = matches => {
     `).join('');
     matchList.innerHTML = html;
   } else {
-    matchList.innerHTML = '<li>Sorry, no results...</li>';
+    matchList.innerHTML = '';
   }
 }
 

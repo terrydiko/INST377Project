@@ -34,17 +34,30 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
           <div class="container">
             <a class="navbar-brand" href="./index.html">
-                  <img src="./Icons/w.png" alt="Logo" style="width: 100px; height: 90px;" >
-                </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+              <img
+                src="./Icons/w.png"
+                alt="Logo"
+                style="width: 100px; height: 90px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="./index.html">Home
-                        <span class="sr-only">(current)</span>
-                      </a>
+                  <a class="nav-link" href="./index.html"
+                    >Home
+                    <span class="sr-only">(current)</span>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./aboutus.html">About</a>
@@ -65,7 +78,6 @@
         <!-- State Button -->
         <label for="crimeType" class="control-label">Crime Type</label>
         <select class="form-control" id="crimeType">
-          
           <option value="accident">Accident</option>
           <option value="assault">Assault</option>
           <option value="auto">Auto</option>
@@ -81,7 +93,7 @@
         <!-- Street 1 -->
         <label for="street1_id" class="needs-validation">Street Address </label>
         <div class="search-input">
-            <input
+          <input
             type="text"
             class="form-control"
             id="street1_id"
@@ -99,49 +111,136 @@
 
       <div class="form-group">
         <!-- Latitude-->
-        <input
-          type="hidden"
-          class="form-control"
-          id="lat_id"
-          name="lat"
-        />
+        <input type="hidden" class="form-control" id="lat_id" name="lat" />
       </div>
-      
+
       <div class="form-group">
         <!-- Longitude-->
-        <input
-          type="hidden"
-          class="form-control"
-          id="lon_id"
-          name="lon"
-        />
+        <input type="hidden" class="form-control" id="lon_id" name="lon" />
       </div>
 
       <div class="form-group">
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary" onclick=submitCrime()>Submit</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#crimeConfirmation"
+        >
+          Submit
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="crimeConfirmation"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header alert-info">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                Confirmation
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body alert-info">Please confirm the crime report</div>
+            <div class="modal-footer alert-info">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" onclick="submitCrime()">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Modal -->
+      <div
+        class="modal fade"
+        id="crimeError"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header alert-danger">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                Error
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body alert-danger">An error has occurred</div>
+            <div class="modal-footer alert-danger">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <script>
         // Disable form submissions if there are invalid fields
-        (function() {
-          'use strict';
-          window.addEventListener('load', function() {
-            // Get the forms we want to add validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                  event.preventDefault();
-                  event.stopPropagation();
+        (function () {
+          "use strict";
+          window.addEventListener(
+            "load",
+            function () {
+              // Get the forms we want to add validation styles to
+              var forms = document.getElementsByClassName("needs-validation");
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(
+                forms,
+                function (form) {
+                  form.addEventListener(
+                    "submit",
+                    function (event) {
+                      if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                      }
+                      form.classList.add("was-validated");
+                    },
+                    false
+                  );
                 }
-                form.classList.add('was-validated');
-              }, false);
-            });
-          }, false);
+              );
+            },
+            false
+          );
         })();
-        </script>
+      </script>
 
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -154,7 +253,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"
       ></script>
-      <script src="js/forms.js"></script>  
+      <script src="js/forms.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.min.js"></script>
     </main>

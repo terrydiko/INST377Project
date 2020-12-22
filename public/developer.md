@@ -15,10 +15,10 @@ Install all node dependencies inside the application directory
  ```
  
 Npm packages include:
-  * body-parser
-  * ejs
-  * express
-  * mongoose
+  * 
+  * 
+  * 
+  * 
   
 ## Deployment
 Change directory (cd) to the application folder and start the application server
@@ -33,7 +33,6 @@ localhost:5000
 ## Server API
 
 ### Endpoints
-
 
 ##### PUT:
   * 

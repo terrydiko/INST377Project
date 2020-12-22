@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home
+                  <a class="nav-link" href="./index.html">Home
                         <span class="sr-only">(current)</span>
                       </a>
                 </li>
@@ -62,8 +62,10 @@
       
       </header>
 
-      <div id="mapid"></div>
-      <div class="m-5 pb-5" >
+      <div class="shadow-lg p-4 mb-4 bg-white" id="mapid"></div>
+      <div class="shadow-lg p-4 mb-4 bg-white" >
+        <input class="form-control" id="myInput" type="text" placeholder="Search Crime Types">
+        <br>
         <table class="table table-dark table-hover" id="table_id">
           <thead>
             <tr>
@@ -91,7 +93,19 @@
         crossorigin="anonymous"
       ></script>
       <script src="./js/reportedCrimes.js"> </script>
-      
+<<<<<<< HEAD
+=======
+      <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbody_id tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+>>>>>>> 092e1d0ac34c6f807dc958323a530179eab3e5b7
     </main>
   </body>
 </html>

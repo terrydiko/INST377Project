@@ -33,10 +33,9 @@ Install all node dependencies inside the application directory
  ```
  
 Npm packages include:
-  * 
-  * 
-  * 
-  * 
+  * body-parser - Body parsing middleware of Node.js
+  * express - Server framework of Node.js
+  * mongoose - Database used for backend querying
   
 ## Deployment
 Change directory (cd) to the application folder and start the application server
@@ -53,13 +52,11 @@ localhost:4000
 ### Endpoints
 
 ##### GET:
-  * 
-  * 
-  * 
+  * GET requests can be retrieved from (crimes)[/crimes]
+  * GET requests retrieves list of locally reported crimes
 ##### POST:
-  * 
-  * 
-  * 
+  * POST adds data to (crime)[/crime]
+  * POST requests to data of crimeType, street address, longitude, and latitude
 
 ## Current Bugs/Issues
  * Site has slow loading times due to server pulling data from API all at once. 

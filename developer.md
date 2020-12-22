@@ -15,10 +15,9 @@ Install all node dependencies inside the application directory
  ```
  
 Npm packages include:
-  * body-parser
-  * ejs
-  * express
-  * mongoose
+  * body-parser - Body parsing middleware of Node.js
+  * express - Server framework of Node.js
+  * mongoose - Database used for backend querying
   
 ## Deployment
 Change directory (cd) to the application folder and start the application server
@@ -27,26 +26,19 @@ npm run start-watch
 ```
 Open your preferred internet browser and type in:
 ```github
-localhost:5000
+localhost:4000
 ```
 
 ## Server API
 
 ### Endpoints
 
-
-##### PUT:
-  * 
-  * 
-  * 
 ##### GET:
-  * 
-  * 
-  * 
+  * GET requests can be retrieved from (crimes)[/crimes]
+  * GET requests retrieves list of locally reported crimes
 ##### POST:
-  * 
-  * 
-  * 
+  * POST adds data to (crime)[/crime]
+  * POST requests to data of crimeType, street address, longitude, and latitude
 
 ## Current Bugs/Issues
  * Site has slow loading times due to server pulling data from API all at once. 
@@ -57,4 +49,3 @@ localhost:5000
  * Include more filtering options on the main page to give the user more control over viewing data
  * Expand the website idea to other counties within Maryland such as Montgomery, Calverton, Anne Arundel
  * Allow user to input a date or another piece of information to get specific information from crimes mathcing the input
-

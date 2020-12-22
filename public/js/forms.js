@@ -83,7 +83,7 @@ const outputHtml = matches => {
     `).join('');
     matchList.innerHTML = html;
   } else {
-    matchList.innerHTML = '<li>'+ search.value +'</li>';
+    matchList.innerHTML = '<li>Sorry, no results...</li>';
   }
 }
 

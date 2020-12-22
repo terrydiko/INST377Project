@@ -7,7 +7,7 @@ Our web application utlizes a collection of APIs to present crime data of Prince
 https://whizzper.herokuapp.com/
 
 ## Target Browsers
-We found it imparative to ensure that our application was versatils enough to be used by various devices and browsers. Users may be on the go when they need to report a crime, so we made sure our page was adaptable to mobile devices. Users also use various browsers such as Edge and Chrome, therefore we ensured our website can be used appropriately on different platforms.
+We found it imparative to ensure that our application was versatile enough to be used by various devices and browsers. Users may be on the go when they need to report a crime, so we made sure our page was adaptable to mobile devices. Users also use various browsers such as Edge and Chrome, therefore we ensured our website can be used appropriately on different platforms.
   * Safari for IOS devices
   * Google Chome for desktop and mobile devices
   * Microsoft Edge

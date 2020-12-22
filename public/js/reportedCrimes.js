@@ -95,45 +95,45 @@ async function getData() {
     if (!data[i]) {
       continue;
     }
-    console.log(data[i])
-    const latitude = data[i].lat;
-    const longitude = data[i].lon;
-    const crime = data[i].crimetype;
     
+    const longitude = data[i].lon;
+    const latitude = data[i].lat;
+    const crime = data[i].crimetype;
+    console.log(`Latitude: ${latitude} Longitude: ${longitude}`)
 
     if (crime === "accident") {
       console.log('accident')
-      L.marker([latitude, longitude], { icon: accidentIcon }).addTo(accident);
+      L.marker([longitude, latitude], { icon: accidentIcon }).addTo(accident);
     }
     if ( crime === "theft") {
-      L.marker([latitude, longitude], { icon: theftIcon }).addTo(theft);
+      L.marker([longitude, latitude], { icon: theftIcon }).addTo(theft);
     }
 
     if (
       crime === "assault") {
-      L.marker([latitude, longitude], { icon: assaultIcon }).addTo(assault);
+      L.marker([longitude, latitude], { icon: assaultIcon }).addTo(assault);
     }
 
     if (crime === "auto") {
-      L.marker([latitude, longitude], { icon: autoIcon }).addTo(auto);
+      L.marker([longitude, latitude], { icon: autoIcon }).addTo(auto);
     }
 
     if (crime === "sex offense") {
-      L.marker([latitude, longitude], { icon: sexOffIcon }).addTo(sexOffense);
+      L.marker([longitude, latitude], { icon: sexOffIcon }).addTo(sexOffense);
     }
 
     if (crime === "robbery") {
-      L.marker([latitude, longitude], { icon: robberyIcon }).addTo(robbery);
+      L.marker([longitude, latitude], { icon: robberyIcon }).addTo(robbery);
     }
 
     if (crime === "B & E") {
-      L.marker([latitude, longitude], { icon: breakingEntIcon }).addTo(
+      L.marker([longitude, latitude], { icon: breakingEntIcon }).addTo(
         breakingEnt
       );
     }
 
     if (crime === "homicide") {
-      L.marker([latitude, longitude], { icon: homicideIcon }).addTo(homicide);
+      L.marker([longitude, latitude], { icon: homicideIcon }).addTo(homicide);
     }
   }
 }

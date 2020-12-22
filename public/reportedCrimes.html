@@ -64,6 +64,8 @@
 
       <div class="shadow-lg p-4 mb-4 bg-white" id="mapid"></div>
       <div class="shadow-lg p-4 mb-4 bg-white" >
+        <input class="form-control" id="myInput" type="text" placeholder="Search Crime Types">
+        <br>
         <table class="table table-dark table-hover" id="table_id">
           <thead>
             <tr>
@@ -91,7 +93,16 @@
         crossorigin="anonymous"
       ></script>
       <script src="./js/reportedCrimes.js"> </script>
-      
+      <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tbody_id tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
     </main>
   </body>
 </html>

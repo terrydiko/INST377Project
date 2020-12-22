@@ -6,6 +6,8 @@
 //     const response = await fetch(url1);
 //     const data2 = await response.json();
 
+
+
 //      for (x = 0; x < data2.length; x++) {
 //         crimeSet1.add(data2[x].clearance_code_inc_type);
 //       }
@@ -35,7 +37,7 @@ function submitCrime() {
     lon: longitude,
   };
   
-  let crimeURL = "https://whizzper.herokuapp.com/crime";
+  let crimeURL = "./crime";
   const fetchPromise = fetch(crimeURL, {
     method: "POST",
     headers: {
@@ -46,8 +48,10 @@ function submitCrime() {
   });
 
   fetchPromise
+  
   .then((response) => {
-    window.location = "../"
+    alert('Crime was Submitted')
+    window.location = "../reportedCrimes.html"
   })
   .catch((err) => {
     console.log(err);

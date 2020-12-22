@@ -33,6 +33,9 @@ let robberyIcon = new CrimeIcon({ iconUrl: "./Icons/robbery.png" });
 let sexOffIcon = new CrimeIcon({ iconUrl: "./Icons/sexOffense.png" });
 let theftIcon = new CrimeIcon({ iconUrl: "./Icons/theft.png" });
 
+
+// getting the tbody Id to insert table data
+  let tbody = document.getElementById('tbody_id');
 // const attribution =
 //   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
@@ -99,11 +102,12 @@ async function getData() {
     const longitude = data[i].lon;
     const latitude = data[i].lat;
     const crime = data[i].crimetype;
+    const location = data[i].location
     console.log(`Latitude: ${latitude} Longitude: ${longitude}`)
 
     if (crime === "accident") {
-      console.log('accident')
       L.marker([longitude, latitude], { icon: accidentIcon }).addTo(accident);
+      
     }
     if ( crime === "theft") {
       L.marker([longitude, latitude], { icon: theftIcon }).addTo(theft);
@@ -135,6 +139,8 @@ async function getData() {
     if (crime === "homicide") {
       L.marker([longitude, latitude], { icon: homicideIcon }).addTo(homicide);
     }
+    
+    tbody.innerHTML += `<tr><td>${crime.toUpperCase()}</td><td>${location}</td></tr>`
   }
 }
 

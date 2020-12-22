@@ -145,3 +145,5 @@ async function getData() {
 }
 
 getData();
+
+document.getElementById('crimereportsuccess').style['display'] = sessionStorage.getItem("displaysuccess");
